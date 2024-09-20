@@ -1,0 +1,59 @@
+{% extends 'administrador/panel.html' %}
+{% load static %}
+{% block contenido %}
+    <!-- Row start -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Modificar Doctor</div>
+                </div>
+                <div class="card-body">
+                    <form
+                        action="../../../../../../../../../../admin/doctores/{{doctor_id}}/"
+                        method="POST">
+                        {% csrf_token %}
+                        <div class="mt-2">
+                            <input type="text" class="form-control"
+                                placeholder="Nombres y Apellidos"
+                                name="nombre" required
+                                value="{{doctor.nombre_apellidos}}">
+                        </div>
+                        <div class="mt-2">
+                            <input type="text" class="form-control"
+                                placeholder="Especialidad"
+                                name="especialidad" required
+                                value="{{doctor.especialidad}}">
+                        </div>
+                        
+                        <div class="input-group mt-2">
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control"
+                                placeholder="Email"
+                                name="email" required
+                                value="{{doctor.userid.email}}">
+                        </div>
+                        <div class="input-group mt-2">
+                            <span class="input-group-text">#</span>
+                            <input type="text" class="form-control"
+                                placeholder="Telefono"
+                                name="telefono" required
+                                value="{{doctor.telefono}}">
+                        </div>
+                        
+                        <div class="modal-footer mt-3">
+                            <a type="button" href="../../../../../../../../../admin/doctores/"
+                                class="btn btn-dark mx-1">
+                                Cancelar
+                            </a>
+                            <button type="submit"
+                                class="btn btn-success mx-1">
+                                Editar
+                            </button>
+                        </div>
+                    </form>      
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

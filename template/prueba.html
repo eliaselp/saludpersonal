@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerta Notificación</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .alert-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            z-index: 1050;
+        }
+        .alert-container {
+            position: relative;
+            margin: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-overlay" id="alertOverlay">
+        <div class="alert-container">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                A simple danger alert—check it out!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.btn-close').on('click', function() {
+                $('#alertOverlay').fadeOut(function() {
+                    $(this).remove();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

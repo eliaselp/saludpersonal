@@ -1,0 +1,483 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Meta -->
+        <link rel="shortcut icon" href="{% static 'img/index/icono.jpg' %}">
+        <!-- Title -->
+        <title>DOCTOR</title>
+        <!-- *************
+			************ Common Css Files *************
+		************ -->
+        <!-- Animated css -->
+        <link rel="stylesheet" href="{% static 'css/panel/animate.css' %}">
+        <!-- Bootstrap font icons css -->
+        <link rel="stylesheet"
+            href="{% static 'css/panel/bootstrap-icons.css' %}">
+        <!-- Main css -->
+        <link rel="stylesheet" href="{% static 'css/panel/main.min.css' %}">
+        <!-- *************
+			************ Vendor Css Files *************
+		************ -->
+        <!-- Scrollbar CSS -->
+        <link rel="stylesheet"
+            href="{% static 'css/panel/OverlayScrollbars.min.css' %}">
+    </head>
+
+    <body>
+        <!-- Loading wrapper start -->
+        <div id="loading-wrapper">
+            <div class="spinner">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                <div class="line4"></div>
+                <div class="line5"></div>
+                <div class="line6"></div>
+            </div>
+        </div>
+        <!-- Loading wrapper end -->
+
+        <!-- Page wrapper start -->
+        <div class="page-wrapper">
+            <!-- Sidebar wrapper start -->
+            <nav class="sidebar-wrapper">
+                <!-- Sidebar brand starts -->
+                <div class="sidebar-brand">
+                    <a href="index.html" class="logo">
+                        <img src="{% static 'img/index/icono.jpg' %}"
+                            alt="Admin Dashboards" />
+                    </a>
+                </div>
+                <!-- Sidebar brand starts -->
+
+                <!-- Sidebar menu starts -->
+                <div class="sidebar-menu">
+                    <div class="sidebarMenuScroll">
+                        <ul>
+
+                            <li>
+                                <a href="../../../../../../../../../../../">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="30" height="30"
+                                        fill="currentColor"
+                                        class="bi bi-house mx-2"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                    </svg>
+                                    <span class="menu-text">Home</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-dropdown active">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="30" height="30"
+                                        fill="currentColor"
+                                        class="bi bi-people-fill mx-2"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                                    </svg>
+                                    <span class="menu-text">Doctores</span>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="index.html"
+                                                class="current-page"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalregistro_doctores">
+                                                Registrar Doctores
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../../../../../../../../../../../../admin/doctores/">Lista
+                                                de Doctores</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- Sidebar menu ends -->
+
+            </nav>
+            <!-- Sidebar wrapper end -->
+
+            <!-- *************
+				************ Main container start *************
+			************* -->
+            <div class="main-container">
+
+                <!-- Page header starts -->
+                <div class="page-header">
+
+                    <!-- Toggle sidebar start -->
+                    <div class="toggle-sidebar" id="toggle-sidebar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30"
+                            height="30" fill="white" class="bi bi-list"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                    </div>
+                    <!-- Toggle sidebar end -->
+
+                    <!-- Logo sm starts -->
+                    <a href="../../../../../../../../../../admin/"
+                        class="d-lg-none d-md-block">
+                        <img src="{% static 'img/index/icono.jpg' %}"
+                            class="logo-sm" alt="Bootstrap Gallery">
+                    </a>
+                    <!-- Logo sm ends -->
+
+                    <!-- Breadcrumb start -->
+                    <ol class="breadcrumb d-lg-flex d-none">
+                        <li class="breadcrumb-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                height="30" fill="currentColor"
+                                class="bi bi-house" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                            </svg>
+                            <a
+                                href="../../../../../../../../../../admin/">Home</a>
+                        </li>
+                    </ol>
+                    <!-- Breadcrumb end -->
+
+                    <!-- Header actions ccontainer start -->
+                    <div class="header-actions-container">
+                        <!-- Header actions start -->
+                        <ul class="header-actions">
+                            <li class="dropdown">
+                                <a href="#" id="userSettings"
+                                    class="user-settings d-flex justify-content-center align-items-center"
+                                    data-toggle="dropdown" aria-haspopup="true">
+                                    <span
+                                        class="user-name d-none d-md-block">{{request.user}}</span>
+                                    <span class="avatar">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            width="40" height="40"
+                                            fill="currentColor"
+                                            class="bi bi-person-vcard"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4m4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5M9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8m1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5" />
+                                            <path
+                                                d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96q.04-.245.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 1 1 12z" />
+                                        </svg>
+                                        <span class="status online"></span>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end"
+                                    aria-labelledby="userSettings">
+                                    <div class="header-profile-actions">
+                                        <a
+                                            href="../../../../../../../../../../../admin/perfil/">Perfil</a>
+                                        <a
+                                            href="../../../../../../../../../set2fa/">
+                                            {% if request.user.action_verify %}
+                                            Desactivar Verificacion
+                                            {% else %}
+                                            Activar Verificacion
+                                            {% endif %}
+                                        </a>
+                                        <a
+                                            href="../../../../../../../../../../../../logout/">Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- Header actions end -->
+                    </div>
+                    <!-- Header actions ccontainer end -->
+                </div>
+                <!-- Page header ends -->
+
+                <!-- Content wrapper scroll start -->
+                <div class="content-wrapper-scroll">
+                    <!-- Content wrapper start -->
+                    <div class="content-wrapper">
+
+                        {% block contenido %}
+                        {% endblock %}
+
+                        <!-- App Footer start -->
+                        <div class="app-footer">
+                            <span>© Monitoreo de Salud Personal</span>
+                        </div>
+                        <!-- App footer end -->
+                    </div>
+                    <!-- Content wrapper scroll end -->
+
+                </div>
+                <!-- *************
+                    ************ Main container end *************
+                ************* -->
+            </div>
+            <!-- Page wrapper end -->
+
+            <!-- Add Modals Here -->
+            <div class="modals-placeholder">
+                <!-- Modal Fade -->
+                <div class="modal fade" id="modalregistro_doctores"
+                    tabindex="-1" aria-labelledby="modalDarkLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold fs-4"
+                                    id="modalDarkLabel">Registrar Doctores</h5>
+                                <button type="button" class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form
+                                    action="../../../../../../../../../../admin/doctores/"
+                                    method="POST">
+                                    {% csrf_token %}
+                                    <div class="mt-2">
+                                        <input type="text" class="form-control"
+                                            placeholder="Nombres y Apellidos"
+                                            name="nombre" required>
+                                    </div>
+                                    <div class="mt-2">
+                                        <input type="text" class="form-control"
+                                            placeholder="Especialidad"
+                                            name="especialidad" required>
+                                    </div>
+                                    <div class="input-group mt-2">
+                                        <span class="input-group-text">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="30" height="30"
+                                                fill="currentColor"
+                                                class="bi bi-person"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                                            </svg>
+                                        </span>
+                                        <input type="text" class="form-control"
+                                            placeholder="Nombre de Usuario"
+                                            name="username" required>
+                                    </div>
+                                    <div class="input-group mt-2">
+                                        <span class="input-group-text">@</span>
+                                        <input type="text" class="form-control"
+                                            placeholder="Email"
+                                            name="email" required>
+                                    </div>
+                                    <div class="input-group mt-2">
+                                        <span class="input-group-text">#</span>
+                                        <input type="text" class="form-control"
+                                            placeholder="Telefono"
+                                            name="telefono" required>
+                                    </div>
+                                    <div class="mt-2">
+                                        <input type="password"
+                                            class="form-control bg-light"
+                                            placeholder="Contraseña"
+                                            name="password1" required>
+                                    </div>
+                                    <div class="mt-2">
+                                        <input type="password"
+                                            class="form-control bg-light"
+                                            placeholder="Repetir Contraseña"
+                                            name="password2" required>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button"
+                                            class="btn btn-dark"
+                                            data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="submit"
+                                            class="btn btn-success">Registrar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% if lista_doctores %}
+                    {% for ld in lista_doctores %}
+                        <!-- Modal 8 -->
+                        <div class="modal fade" id="modificardoctor{{ld.id}}" tabindex="-1"
+                            aria-labelledby="modalSmLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalSmLabel">Modificar Doctor</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Esta seguro que desea modificar al doctor {{ld.nombre_apellidos}}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
+                                        <a href="../../../../../../../admin/doctores/{{ld.id}}/" 
+                                        type="button" class="btn btn-warning">Editar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="eliminardoctor{{ld.id}}" tabindex="-1"
+                            aria-labelledby="modalSmLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalSmLabel">Eliminar Doctor</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Esta seguro que desea eliminar al doctor {{ld.nombre_apellidos}}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
+                                        <a href="../../../../../../../admin/doctores/eliminar/{{ld.id}}/" type="button" class="btn btn-danger">Eliminar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+            </div>
+
+            {% if Error %}
+            <div
+                class="alert alert-danger alert-dismissible fade show floating-alert"
+                role="alert">
+                {{Error}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+            </div>
+            {% elif Success %}
+            <div
+                class="alert alert-success alert-dismissible fade show floating-alert"
+                role="alert">
+                {{Success}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+            </div>
+            {% endif %}
+            <style>
+            .floating-alert {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 1050; /* Asegura que esté por encima de otros elementos */
+                width: 300px; /* Ajusta el ancho según tus necesidades */
+            }
+        </style>
+
+            <!-- *************
+			************ Required JavaScript Files *************
+		************* -->
+            <!-- Required jQuery first, then Bootstrap Bundle JS -->
+            <script src="{% static 'js/panel/jquery.min.js' %}"></script>
+            <script
+                src="{% static 'js/panel/bootstrap.bundle.min.js' %}"></script>
+            <script src="{% static 'js/panel/modernizr.js' %}"></script>
+            <script src="{% static 'js/panel/moment.js' %}"></script>
+
+            <!-- *************
+			************ Vendor Js Files *************
+		************* -->
+            <!-- Overlay Scroll JS -->
+            <script
+                src="{% static 'js/panel/jquery.overlayScrollbars.min.js' %}"></script>
+            <script src="{% static 'js/panel/custom-scrollbar.js' %}"></script>
+            <!-- Apex Charts -->
+            <script src="{% static 'js/panel/apexcharts.min.js' %}"></script>
+            <script>
+            var options = {
+                chart: {
+                height: 235,
+                width: '75%',
+                type: 'bar',
+                toolbar: {
+                    show: false,
+                },
+                },
+                plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '60%',
+                    borderRadius: 8,
+                },
+                },
+                dataLabels: {
+                enabled: false
+                },
+                stroke: {
+                show: true,
+                width: 0,
+                colors: ['#435EEF']
+                },
+                series: [{
+                name: 'Cantidad',
+                data: [{{cantidad_doctores}}, {{cantidad_pacientes}}]
+                }],
+                legend: {
+                show: false,
+                },
+                xaxis: {
+                categories: ['Doctores', 'Pacientes'],
+                },
+                yaxis: {
+                show: false,
+                },
+                fill: {
+                colors: ['#4267cd'],
+                },
+                tooltip: {
+                y: {
+                    formatter: function(val) {
+                    return + val
+                    }
+                }
+                },
+                grid: {
+                show: false,
+                xaxis: {
+                    lines: {
+                    show: true
+                    }
+                },   
+                yaxis: {
+                    lines: {
+                    show: false,
+                    } 
+                },
+                padding: {
+                    top: 0,
+                    right: 0,
+                    bottom: -10,
+                    left: 0
+                },
+                },
+                colors: ['#ffffff'],
+            }
+            var chart = new ApexCharts(
+                document.querySelector("#salesGraph"),
+                options
+            );
+            chart.render();
+        </script>
+            <!-- Main Js Required -->
+            <script src="{% static 'js/panel/main.js' %}"></script>
+        </body>
+
+    </html>

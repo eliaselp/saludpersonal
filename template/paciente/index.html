@@ -1,0 +1,47 @@
+{% extends 'paciente/panel.html' %}
+{% load static %}
+{% block contenido %}
+    <div class="row">
+        <div class="col-xxl-3 col-sm-6 col-12">
+            <div class="stats-tile">
+                <div class="sale-icon shade-red">
+                    <img src="{% static 'img/panel/doc.png' %}" class="bi bi-pie-chart h-100"></img>
+                </div>
+                <div class="sale-details">
+                    <h3 class="text-red">{{cantidad_doctores}}</h3>
+                    <p>Doctores</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-3 col-sm-6 col-12">
+            <div class="stats-tile">
+                <div class="sale-icon shade-blue">
+                    <img src="{% static 'img/panel/paciente.png' %}" class="bi bi-pie-chart h-100"></img>
+                </div>
+                <div class="sale-details">
+                    <h3 class="text-blue">{{cantidad_pacientes}}</h3>
+                    <p>Pacientes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Row end -->
+    <!-- Row start -->
+    <div class="row">
+        <div class="col-xxl-3 col-sm-12 col-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Usuarios</div>
+                </div>
+                <div class="card-body">
+                    <div id="salesGraph" class="auto-align-graph"></div>
+                    <div class="num-stats">
+                        <h2>{{total_usuarios}}</h2>
+                        <h6 class="text-truncate">Total de usuarios</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Row end -->        
+{% endblock  %}
